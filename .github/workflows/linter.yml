@@ -3,13 +3,13 @@ on: push
 jobs:
   clone-repo:
     runs-on: ubuntu-latest
-      steps:
+    steps:
         - name: clone-repo
         - run: actions/checkout@main
         
   install-requires:
     runs-on: ubuntu-latest
-      steps:
+    steps:
         - name: install xomposer inquires
         - run: make install
         
