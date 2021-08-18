@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: clone-repo
-        run: actions/checkout@main
+        uses: actions/checkout@main
 
   install-requires:
     runs-on: ubuntu-latest
