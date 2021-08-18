@@ -1,27 +1,14 @@
 name: linter
 on: push
 jobs:
-  clone-repo:
+  run-linter:
     runs-on: ubuntu-latest
     steps:
       - name: clone-repo
         uses: actions/checkout@master
-#   look-files-list:
-#     needs: clone-repo
-#     runs-on: ubuntu-latest
-#     steps:
       - name: look-list
         run: ls -la
-#   install-requires:
-#     needs: clone-repo
-#     runs-on: ubuntu-latest
-#     steps:
       - name: install composer inquires
         run: make install
-
-#   start-linter:
-#     needs: install-requires
-#     runs-on: ubuntu-latest
-#     steps:
       - name: run linter
         run: make lint
