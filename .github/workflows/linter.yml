@@ -6,7 +6,12 @@ jobs:
     steps:
       - name: clone-repo
         uses: actions/checkout@main
-
+  look-files-list:
+    needs: clone-repo
+    runs-on: ubuntu-latest
+    steps:
+      - name: look-list
+        run: echo ls -la
   install-requires:
     needs: clone-repo
     runs-on: ubuntu-latest
