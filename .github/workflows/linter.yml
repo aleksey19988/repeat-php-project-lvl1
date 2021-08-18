@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: look-list
-        run: echo ls -la
+        run: ls -la
   install-requires:
     needs: clone-repo
     runs-on: ubuntu-latest
