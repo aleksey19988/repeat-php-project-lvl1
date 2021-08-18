@@ -1,13 +1,11 @@
 name: linter
-env:
-  SHA: ${{ github.sha }}
 on: push
 jobs:
   clone-repo:
     runs-on: ubuntu-latest
     steps:
       - name: clone-repo
-        uses: actions/checkout@env.SHA
+        uses: actions/checkout@main
   look-files-list:
     needs: clone-repo
     runs-on: ubuntu-latest
