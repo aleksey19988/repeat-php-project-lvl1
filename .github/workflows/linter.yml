@@ -1,0 +1,11 @@
+name: linter
+on: push
+jobs:
+  start-linter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: install composer inquires
+        run: make install
+      
+      - name: run linter
+        run: make lint
