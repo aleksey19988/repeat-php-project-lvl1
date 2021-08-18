@@ -4,6 +4,9 @@ jobs:
   start-linter:
     runs-on: ubuntu-latest
     steps:
+      - name: clone repo
+        run: actions/checkout@v1
+        
       - name: install composer inquires
         run: make install
       
