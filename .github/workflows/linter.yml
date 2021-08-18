@@ -11,7 +11,7 @@ jobs:
     needs: clone-repo
     runs-on: ubuntu-latest
     steps:
-      - name: install xomposer inquires
+      - name: install composer inquires
         run: make install
 
   start-linter:
