@@ -1,14 +1,20 @@
 name: linter
 on: push
 jobs:
+  clone-repo:
+    runs-on: ubuntu-latest
+      steps:
+        - name: clone-repo
+        - run: actions/checkout@main
+        
+  install-requires:
+    runs-on: ubuntu-latest
+      steps:
+        - name: install xomposer inquires
+        - run: make install
+        
   start-linter:
     runs-on: ubuntu-latest
     steps:
-      - name: clone repo
-        run: actions/checkout@v1
-        
-      - name: install composer inquires
-        run: make install
-      
       - name: run linter
         run: make lint
