@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: clone-repo
-        uses: actions/checkout@main
+        uses: actions/checkout@master
   look-files-list:
     needs: clone-repo
     runs-on: ubuntu-latest
