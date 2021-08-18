@@ -8,12 +8,14 @@ jobs:
         uses: actions/checkout@main
 
   install-requires:
+    needs: clone-repo
     runs-on: ubuntu-latest
     steps:
       - name: install xomposer inquires
         run: make install
 
   start-linter:
+    needs: install-requires
     runs-on: ubuntu-latest
     steps:
       - name: run linter
