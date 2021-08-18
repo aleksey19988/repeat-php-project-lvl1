@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: clone-repo
-        uses: actions/checkout@${{{ github.sha }}
+        uses: actions/checkout@v1
   look-files-list:
     needs: clone-repo
     runs-on: ubuntu-latest
