@@ -5,13 +5,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: clone-repo
-      - run: actions/checkout@main
+        run: actions/checkout@main
 
   install-requires:
     runs-on: ubuntu-latest
     steps:
       - name: install xomposer inquires
-      - run: make install
+        run: make install
 
   start-linter:
     runs-on: ubuntu-latest
