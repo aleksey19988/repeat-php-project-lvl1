@@ -22,8 +22,9 @@ function brainEvenGameProcess()
         if ($correctAnswer === $userAnswer) {
             line('Correct!');
         } else {
-            line("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.\n
-            Let's try again, {$userName}!");
+            line(
+                "'$userAnswer' is wrong answer ;(. Correct answer was '$correctAnswer'.\nLet's try again, $userName!"
+            );
             $isUserWin = false;
             return;
         }
