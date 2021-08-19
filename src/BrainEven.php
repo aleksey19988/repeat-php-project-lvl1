@@ -7,14 +7,13 @@ use function cli\prompt;
 use function Brain\Games\Cli\welcome;
 use function Brain\Games\Utils\isEvenNum;
 
-$countGames = 3;
 function brainEvenGameProcess()
 {
     $userName = welcome();
     line("Answer \"yes\" if the number is even, otherwise answer \"no\".");
     $countGames = 3;
     $isUserWin = true;
-    for($i = 0; $i < $countGames; $i++) {
+    for ($i = 0; $i < $countGames; $i++) {
         $randomNum = rand(1, 100);
         $correctAnswer = (isEvenNum($randomNum)) ? 'yes' : 'no';
         line("Quesion: {$randomNum}");
@@ -23,7 +22,8 @@ function brainEvenGameProcess()
         if ($correctAnswer === $userAnswer) {
             line('Correct!');
         } else {
-            line("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.\nLet's try again, {$userName}!");
+            line("'{$userAnswer}' is wrong answer ;(. Correct answer was '{$correctAnswer}'.\n
+            Let's try again, {$userName}!");
             $isUserWin = false;
             return;
         }
