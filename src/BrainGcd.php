@@ -17,7 +17,6 @@ function brainGcdGameProcess()
         $num1 = rand(1, 100);
         $num2 = rand(1, 100);
         $correctAnswer = gcd($num1, $num2);
-        line("correct answer: $correctAnswer");
         line("Question: $num1 $num2");
         $userAnswer = prompt('Your answer');
 
