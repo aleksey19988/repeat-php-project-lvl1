@@ -6,8 +6,6 @@ jobs:
     steps:
       - name: clone-repo
         uses: actions/checkout@master
-      - name: look-list
-        run: ls -la
       - name: install composer inquires
         run: make install
       - name: run linter
