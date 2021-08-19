@@ -1,27 +1,31 @@
 <?php
 
-namespace Brain\Games\BrainGcd;
+namespace Brain\Games\BrainPrime;
 
 use function cli\line;
 use function cli\prompt;
 use function Brain\Games\Cli\welcome;
 use function Brain\Games\Utils\gcd;
+use function Brain\Games\Utils\isPrime;
 
-function brainGcdGameProcess()
+function brainPrimeGameProcess()
 {
     $userName = welcome();
-    line("Find the greatest common divisor of given numbers.");
+    line("Answer \"yes\" if given number is prime. Otherwise answer \"no\".");
     $countGames = 3;
     $isUserWin = true;
     for ($i = 0; $i < $countGames; $i++) {
-        $num1 = rand(1, 100);
-        $num2 = rand(1, 100);
-        $correctAnswer = gcd($num1, $num2);
-        line("Question: $num1 $num2");
-        $userAnswer = prompt('Your answer');
+        $num = rand(1, 100);
+        if (isPrime($num)) {
+            $correctAnswer = 'yes';
+        } else {
+            $correctAnswer = 'no';
+        }
+        line("Question: $num");
+        $userAnswer = prompt("Your answer");
 
-        if ((string) $correctAnswer === $userAnswer) {
-            line('Correct!');
+        if ($correctAnswer === $userAnswer) {
+            line("Correct!");
         } else {
             line(
                 "'$userAnswer' is wrong answer ;(. Correct answer was '$correctAnswer'.\nLet's try again, $userName!"
