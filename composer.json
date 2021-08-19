@@ -3,7 +3,9 @@
     "description": "repeat first php-project on Hexlet",
     "autoload": {
 	"files": [
-	    "./src/Cli.php"
+	    "./src/Cli.php",
+	    "./src/BrainEven.php",
+	    "./src/Utils.php"
 	],
         "psr-4": {
             "Hexlet\\Code\\": "src/"
@@ -16,7 +18,8 @@
         }
     ],
     "bin": [
-	"bin/brain-games"
+	"bin/brain-games",
+	"bin/brain-even"
     ],
     "license": "(LGPL-2.1-only or GPL-3.0-or-later)",
     "require": {
