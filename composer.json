@@ -7,7 +7,9 @@
 	    "./src/BrainEven.php",
 	    "./src/BrainCalc.php",
 	    "./src/BrainGcd.php",
-	    "./src/Utils.php"
+	    "./src/BrainProgression.php",
+	    "./src/Utils.php",
+	    "./src/UtilsForBrainProgression.php"
 	],
         "psr-4": {
             "Hexlet\\Code\\": "src/"
@@ -23,7 +25,8 @@
 	"bin/brain-games",
 	"bin/brain-even",
 	"bin/brain-calc",
-	"bin/brain-gcd"
+	"bin/brain-gcd",
+	"bin/brain-progression"
     ],
     "license": "(LGPL-2.1-only or GPL-3.0-or-later)",
     "require": {
