@@ -27,8 +27,8 @@ function brainEvenGameProcess()
             $isUserWin = false;
             return;
         }
-        if ($isUserWin) {
-            line("Congratulations, {$userName}!");
-        }
+    }
+    if ($isUserWin) {
+        line("Congratulations, {$userName}!");
     }
 }
