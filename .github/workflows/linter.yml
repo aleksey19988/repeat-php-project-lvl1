@@ -1,0 +1,14 @@
+name: linter
+on: push
+jobs:
+  run-linter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: clone-repo
+        uses: actions/checkout@master
+      - name: look-list
+        run: ls -la
+      - name: install composer inquires
+        run: make install
+      - name: run linter
+        run: make lint
