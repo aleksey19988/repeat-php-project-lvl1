@@ -7,13 +7,11 @@ use function cli\prompt;
 use function Brain\Games\Cli\welcome;
 use function Brain\Games\Utils\isEvenNum;
 
-function brainEvenGameProcess()
+function brainEvenGameProcess($rules, $countRounds, $userName)
 {
-    $userName = welcome();
-    line("Answer \"yes\" if the number is even, otherwise answer \"no\".");
-    $countGames = 3;
+    line($rules);
     $isUserWin = true;
-    for ($i = 0; $i < $countGames; $i++) {
+    for ($i = 0; $i < $countRounds; $i++) {
         $randomNum = rand(1, 100);
         $correctAnswer = (isEvenNum($randomNum)) ? 'yes' : 'no';
         line("Quesion: {$randomNum}");

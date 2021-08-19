@@ -6,14 +6,12 @@ use function cli\line;
 use function cli\prompt;
 use function Brain\Games\Cli\welcome;
 
-function brainCalcGameProcess()
+function brainCalcGameProcess($rules, $countRounds, $userName)
 {
-    $userName = welcome();
-    line("What is the result of the expression?");
-    $countGames = 3;
+    line($rules);
     $isUserWin = true;
     $operations = ['+', '-', '*'];
-    for ($i = 0; $i < $countGames; $i++) {
+    for ($i = 0; $i < $countRounds; $i++) {
         $num1 = rand(1, 100);
         $num2 = rand(2, 100);
         $operation = $operations[array_rand($operations)];

@@ -8,13 +8,11 @@ use function Brain\Games\Cli\welcome;
 use function Brain\Games\Utils\gcd;
 use function Brain\Games\Utils\isPrime;
 
-function brainPrimeGameProcess()
+function brainPrimeGameProcess($rules, $countRounds, $userName)
 {
-    $userName = welcome();
-    line("Answer \"yes\" if given number is prime. Otherwise answer \"no\".");
-    $countGames = 3;
+    line($rules);
     $isUserWin = true;
-    for ($i = 0; $i < $countGames; $i++) {
+    for ($i = 0; $i < $countRounds; $i++) {
         $num = rand(1, 100);
         if (isPrime($num)) {
             $correctAnswer = 'yes';

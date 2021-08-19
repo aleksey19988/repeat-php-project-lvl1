@@ -7,13 +7,11 @@ use function cli\prompt;
 use function Brain\Games\Cli\welcome;
 use function Brain\Games\Utils\gcd;
 
-function brainGcdGameProcess()
+function brainGcdGameProcess($rules, $countRounds, $userName)
 {
-    $userName = welcome();
-    line("Find the greatest common divisor of given numbers.");
-    $countGames = 3;
+    line($rules);
     $isUserWin = true;
-    for ($i = 0; $i < $countGames; $i++) {
+    for ($i = 0; $i < $countRounds; $i++) {
         $num1 = rand(1, 100);
         $num2 = rand(1, 100);
         $correctAnswer = gcd($num1, $num2);

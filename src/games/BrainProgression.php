@@ -5,18 +5,16 @@ namespace Brain\Games\BrainProgression;
 use function cli\line;
 use function cli\prompt;
 use function Brain\Games\Cli\welcome;
-use function Brain\Games\UtilsForBrainProgression\fillProgressionRandomNum;
-use function Brain\Games\UtilsForBrainProgression\hideElemInProgression;
-use function Brain\Games\UtilsForBrainProgression\getElem;
-use function Brain\Games\UtilsForBrainProgression\getProgression;
+use function Brain\Games\Utils\fillProgressionRandomNum;
+use function Brain\Games\Utils\hideElemInProgression;
+use function Brain\Games\Utils\getElem;
+use function Brain\Games\Utils\getProgression;
 
-function brainProgressionGameProcess()
+function brainProgressionGameProcess($rules, $countRounds, $userName)
 {
-    $userName = welcome();
-    line("What number is missing in the progression?");
-    $countGames = 3;
+    line($rules);
     $isUserWin = true;
-    for ($i = 0; $i < $countGames; $i++) {
+    for ($i = 0; $i < $countRounds; $i++) {
         $lengthOfProgression = rand(5, 15);
         $progressionWithAllElem = fillProgressionRandomNum($lengthOfProgression);
         $finalProgressionAndElem = hideElemInProgression($progressionWithAllElem);
