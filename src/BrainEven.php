@@ -11,10 +11,10 @@ $countGames = 3;
 function brainEvenGameProcess()
 {
     $userName = welcome();
+    line("Answer \"yes\" if the number is even, otherwise answer \"no\".");
     $countGames = 3;
     $isUserWin = true;
     for($i = 0; $i < $countGames; $i++) {
-        line("Answer \"yes\" if the number is even, otherwise answer \"no\".");
         $randomNum = rand(1, 100);
         $correctAnswer = (isEvenNum($randomNum)) ? 'yes' : 'no';
         line("Quesion: {$randomNum}");
