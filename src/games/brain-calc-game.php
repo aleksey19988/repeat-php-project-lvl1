@@ -8,7 +8,7 @@ function brainCalcGame()
 {
     $rules = "What is the result of the expression?";
     $operations = ['+', '-', '*'];
-    $round = function() use ($operations) {
+    $round = function () use ($operations) {
         $num1 = rand(1, 100);
         $num2 = rand(2, 100);
         $operation = $operations[array_rand($operations)];
@@ -31,5 +31,5 @@ function brainCalcGame()
             'correctAnswer' => $correctAnswer,
         ];
     };
-    startGame($rules, $round);    
+    startGame($rules, $round);
 }

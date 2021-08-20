@@ -11,7 +11,7 @@ use function Brain\Games\Utils\getProgression;
 function brainProgressionGame()
 {
     $rules = "What number is missing in the progression?";
-    $round = function() {
+    $round = function () {
         $lengthOfProgression = rand(5, 15);
         $progressionWithAllElem = fillProgressionRandomNum($lengthOfProgression);
         $finalProgressionAndElem = hideElemInProgression($progressionWithAllElem);

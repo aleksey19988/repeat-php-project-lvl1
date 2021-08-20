@@ -8,7 +8,7 @@ use function Brain\Games\Utils\isPrime;
 function brainPrimeGame()
 {
     $rules = "Answer \"yes\" if given number is prime. Otherwise answer \"no\".";
-    $round = function() {
+    $round = function () {
         $num = rand(1, 100);
         if (isPrime($num)) {
             $correctAnswer = 'yes';

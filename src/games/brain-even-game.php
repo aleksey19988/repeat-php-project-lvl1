@@ -8,7 +8,7 @@ use function Brain\Games\GameEngine\startGame;
 function brainEvenGame()
 {
     $rules = "Answer \"yes\" if the number is even, otherwise answer \"no\".";
-    $round = function() {
+    $round = function () {
         $randomNum = rand(1, 100);
         $question = "Quesion: {$randomNum}";
         $correctAnswer = (isEvenNum($randomNum)) ? 'yes' : 'no';
